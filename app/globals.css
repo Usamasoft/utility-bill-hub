@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply text-gray-800 bg-white; }
+  h1 { @apply text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight; }
+  h2 { @apply text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-4; }
+  h3 { @apply text-xl font-semibold text-gray-800 mt-6 mb-3; }
+  p  { @apply text-gray-700 leading-relaxed mb-4; }
+  ul { @apply list-disc pl-6 mb-4 space-y-1 text-gray-700; }
+  ol { @apply list-decimal pl-6 mb-4 space-y-2 text-gray-700; }
+  li { @apply leading-relaxed; }
+  a  { @apply text-blue-700 hover:text-blue-900 underline-offset-2; }
+  table { @apply w-full border-collapse mb-6; }
+  th { @apply bg-blue-800 text-white px-4 py-2 text-left text-sm font-semibold; }
+  td { @apply border border-gray-200 px-4 py-2 text-sm; }
+  tr:nth-child(even) td { @apply bg-gray-50; }
+}
+
+@layer components {
+  .btn-primary { @apply inline-flex items-center gap-2 bg-blue-700 hover:bg-blue-800 text-white font-semibold px-6 py-3 rounded-xl transition-colors shadow-md; }
+  .btn-secondary { @apply inline-flex items-center gap-2 bg-white hover:bg-gray-50 text-blue-700 font-semibold px-6 py-3 rounded-xl border-2 border-blue-200 transition-colors; }
+  .card { @apply bg-white rounded-2xl shadow-sm border border-gray-100 p-6; }
+  .info-box  { @apply bg-blue-50 border-l-4 border-blue-600 rounded-r-xl p-4 my-6 text-blue-900; }
+  .warn-box  { @apply bg-amber-50 border-l-4 border-amber-500 rounded-r-xl p-4 my-6 text-amber-900; }
+  .success-box { @apply bg-emerald-50 border-l-4 border-emerald-500 rounded-r-xl p-4 my-6 text-emerald-900; }
+  .step-number { @apply flex-shrink-0 w-8 h-8 rounded-full bg-blue-700 text-white text-sm font-bold flex items-center justify-center; }
+  .prose-content { @apply max-w-none; }
+  .section-divider { @apply border-t border-gray-100 my-10; }
+}
